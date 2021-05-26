@@ -57,6 +57,34 @@
             android:layout_width="@dimen/btn_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_percent" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_CE" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_C" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_delete" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_numbers"
             android:text="@string/key_7" />
 
