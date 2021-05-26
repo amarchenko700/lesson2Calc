@@ -12,35 +12,35 @@
         android:columnCount="5">
 
         <Button
-            android:layout_width="@dimen/btn_width"
+            android:layout_width="@dimen/btn_mem_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_memory"
             android:text="@string/MC" />
 
         <Button
-            android:layout_width="@dimen/btn_width"
+            android:layout_width="@dimen/btn_mem_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_memory"
             android:text="@string/MR" />
 
         <Button
-            android:layout_width="@dimen/btn_width"
+            android:layout_width="@dimen/btn_mem_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_memory"
             android:text="@string/Masc" />
 
         <Button
-            android:layout_width="@dimen/btn_width"
+            android:layout_width="@dimen/btn_mem_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_memory"
             android:text="@string/Mdesc" />
 
         <Button
-            android:layout_width="@dimen/btn_width"
+            android:layout_width="@dimen/btn_mem_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_memory"
