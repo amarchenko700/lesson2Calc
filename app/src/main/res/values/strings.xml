@@ -13,8 +13,8 @@
     <string name="key_dot">.</string>
     <string name="MC">MC</string>
     <string name="MR">MR</string>
-    <string name="Mdesc">M-</string>
-    <string name="Masc">M+</string>
+    <string name="MDesc">M-</string>
+    <string name="MAsc">M+</string>
     <string name="MS">MS</string>
     <string name="key_inverting">+/-</string>
     <string name="key_multiplication">*</string>
