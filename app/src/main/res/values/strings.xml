@@ -17,4 +17,8 @@
     <string name="Masc">M+</string>
     <string name="MS">MS</string>
     <string name="key_inverting">+/-</string>
+    <string name="key_multiplication">*</string>
+    <string name="key_subtraction">-</string>
+    <string name="key_addition">+</string>
+    <string name="key_equally">=</string>
 </resources>
