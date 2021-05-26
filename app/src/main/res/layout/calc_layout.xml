@@ -50,7 +50,74 @@
 
     <GridLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_1" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_2" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_3" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_4" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_5" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_6" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_7" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_8" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_9" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_0" />
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:text="@string/key_dot" />
 
     </GridLayout>
 
