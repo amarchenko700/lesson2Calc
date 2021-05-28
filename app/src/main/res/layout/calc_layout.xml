@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="5">
+
+        <Button
+            android:id="@+id/MC"
+            android:layout_width="@dimen/btn_mem_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MC" />
+
+        <Button
+            android:id="@+id/MR"
+            android:layout_width="@dimen/btn_mem_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MR" />
+
+        <Button
+            android:id="@+id/MAsc"
+            android:layout_width="@dimen/btn_mem_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MAsc" />
+
+        <Button
+            android:id="@+id/MDesc"
+            android:layout_width="@dimen/btn_mem_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MDesc" />
+
+        <Button
+            android:id="@+id/MS"
+            android:layout_width="@dimen/btn_mem_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MS" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <Button
+            android:id="@+id/key_percent"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_percent" />
+
+        <Button
+            android:id="@+id/key_CE"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_CE" />
+
+        <Button
+            android:id="@+id/key_C"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_C" />
+
+        <Button
+            android:id="@+id/key_delete"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_delete" />
+
+        <Button
+            android:id="@+id/key_7"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_7" />
+
+        <Button
+            android:id="@+id/key_8"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_8" />
+
+        <Button
+            android:id="@+id/key_9"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_9" />
+
+        <Button
+            android:id="@+id/key_multiplication"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_multiplication" />
+
+        <Button
+            android:id="@+id/key_4"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_4" />
+
+        <Button
+            android:id="@+id/key_5"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_5" />
+
+        <Button
+            android:id="@+id/key_6"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_6" />
+
+        <Button
+            android:id="@+id/key_subtraction"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_subtraction" />
+
+        <Button
+            android:id="@+id/key_1"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_1" />
+
+        <Button
+            android:id="@+id/key_2"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_2" />
+
+        <Button
+            android:id="@+id/key_3"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_3" />
+
+        <Button
+            android:id="@+id/key_addition"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_addition" />
+
+        <Button
+            android:id="@+id/key_inverting"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_inverting" />
+
+        <Button
+            android:id="@+id/key_0"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_0" />
+
+        <Button
+            android:id="@+id/key_dot"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_numbers"
+            android:text="@string/key_dot" />
+
+        <Button
+            android:id="@+id/key_equally"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_equally" />
+
+    </GridLayout>
+
+</LinearLayout>
