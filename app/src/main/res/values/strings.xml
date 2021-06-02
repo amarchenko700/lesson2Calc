@@ -25,4 +25,5 @@
     <string name="key_CE">CE</string>
     <string name="key_C">C</string>
     <string name="key_delete">del</string>
+    <string name="key_division">/</string>
 </resources>
