@@ -12,6 +12,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/sizeMemoryString"
         android:gravity="start"
+        android:textColor="@color/colorTextView"
         android:text="M">
     </TextView>
 
@@ -21,6 +22,7 @@
         android:layout_height="match_parent"
         android:textStyle="bold"
         android:textSize="@dimen/sizeExprString"
+        android:textColor="@color/colorTextView"
         android:gravity="center">
     </TextView>
 
