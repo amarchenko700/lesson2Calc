@@ -13,6 +13,7 @@ public class Calculator implements Serializable {
 
     private TextView textView, textViewMemory;
     private MathGB mgb;
+    private Integer countStartBracket;
 
     private Float memoryValue = 0f;
 
@@ -21,10 +22,11 @@ public class Calculator implements Serializable {
         this.textViewMemory = tvm;
         mgb = new MathGB();
         expressionString = "";
+        countStartBracket = 0;
     }
 
     public void inputExpression(View v) {
-CharSequence ch = textView.getText();
+
         switch (v.getId()) {
             //region numbers_Handlers
             case R.id.key_0: {
@@ -85,6 +87,20 @@ CharSequence ch = textView.getText();
                 addOperations("/");
                 break;
             }
+            case R.id.key_bracketStart: {
+                char lastChar = getLastChar();
+                if (mgb.charIsBracketStart(lastChar) || mgb.charIsFunction(lastChar))
+                    countStartBracket++;
+                    expressionString = expressionString + "(";
+                break;
+            }
+            case R.id.key_bracketEnd: {
+                if(countStartBracket > 0) {
+                    expressionString = expressionString + ")";
+                    countStartBracket--;
+                }
+                break;
+            }
             //endregion
             //region memory
             case R.id.key_MC: {
@@ -107,6 +123,7 @@ CharSequence ch = textView.getText();
             //endregion
             case R.id.key_C: {
                 expressionString = "";
+                countStartBracket = 0;
                 break;
 
             }
@@ -125,8 +142,10 @@ CharSequence ch = textView.getText();
             }
             case R.id.key_delete: {
                 char[] expCharArr = expressionString.toCharArray();
-                if (expCharArr.length > 0)
+                if (expCharArr.length > 0) {
                     expressionString = String.copyValueOf(expCharArr, 0, expCharArr.length - 1);
+                    if(mgb.charIsBracketStart(getLastChar())) countStartBracket--;
+                }
                 break;
             }
             case R.id.key_equally: {
@@ -145,9 +164,8 @@ CharSequence ch = textView.getText();
     }
 
     private void addOperations(String operations) {
-        char[] expCharArr = expressionString.toCharArray();
-        char lastChar = expCharArr[expCharArr.length - 1];
-        if (mgb.charIsNumber(lastChar) || mgb.charIsBracket(lastChar))
+        char lastChar = getLastChar();
+        if (mgb.charIsNumber(lastChar) || mgb.charIsBracketEnd(lastChar))
             expressionString = expressionString + operations;
     }
 
@@ -164,6 +182,12 @@ CharSequence ch = textView.getText();
             }
         }
         return lastNumber;
+    }
+
+    private char getLastChar(){
+        char[] expCharArr = expressionString.toCharArray();
+        char lastChar = expCharArr[expCharArr.length - 1];
+        return lastChar;
     }
 
     private Float getLastNumberFloat(){

@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleX="2"
+        android:scaleX="3"
         android:scaleY="2"
         app:srcCompat="@drawable/calcbackground">
     </ImageView>
@@ -15,8 +15,19 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="bottom|center">
+        android:layout_gravity="bottom|start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textMemory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="@dimen/sizeMemoryString"
+            android:gravity="start"
+            android:textColor="@color/colorTextView"
+            android:text="M">
+        </TextView>
 
         <TextView
             android:id="@+id/expressionString"
@@ -24,14 +35,224 @@
             android:layout_height="match_parent"
             android:textStyle="bold"
             android:textSize="@dimen/sizeExprString"
+            android:textColor="@color/colorTextView"
             android:gravity="center">
         </TextView>
 
-        <include
-            layout="@layout/calc_layout"
+        <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:columnCount="4">
+
+            <Button
+                android:id="@+id/key_MC"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_memory"
+                android:text="@string/MC" />
+
+            <Button
+                android:id="@+id/key_MR"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_memory"
+                android:text="@string/MR" />
+
+            <Button
+                android:id="@+id/key_MAsc"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_memory"
+                android:text="@string/MAsc" />
+
+            <Button
+                android:id="@+id/key_MDesc"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_memory"
+                android:text="@string/MDesc" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="7">
+
+            <Button
+                android:id="@+id/key_CE"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_CE" />
+
+            <Button
+                android:id="@+id/key_C"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_C" />
+
+            <Button
+                android:id="@+id/key_delete"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_delete" />
+
+            <Button
+                android:id="@+id/key_multiplication"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_multiplication" />
+
+            <Button
+                android:id="@+id/key_addition"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_addition" />
+
+            <Button
+                android:id="@+id/key_subtraction"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_subtraction" />
+
+            <Button
+                android:id="@+id/key_division"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_division" />
+
+            <Button
+                android:id="@+id/key_5"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_5" />
+
+            <Button
+                android:id="@+id/key_6"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_6" />
+
+            <Button
+                android:id="@+id/key_7"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_7" />
+
+            <Button
+                android:id="@+id/key_8"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_8" />
+
+            <Button
+                android:id="@+id/key_9"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_9" />
+
+            <Button
+                android:id="@+id/key_dot"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_dot" />
+
+            <Button
+                android:id="@+id/key_bracketStart"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_bracketStart" />
+
+            <Button
+                android:id="@+id/key_0"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_0" />
+
+            <Button
+                android:id="@+id/key_1"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_1" />
+
+            <Button
+                android:id="@+id/key_2"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_2" />
+
+            <Button
+                android:id="@+id/key_3"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_3" />
+
+            <Button
+                android:id="@+id/key_4"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_numbers"
+                android:text="@string/key_4" />
+
+            <Button
+                android:id="@+id/key_equally"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_equally" />
+
+            <Button
+                android:id="@+id/key_bracketEnd"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_layout_margin"
+                android:backgroundTint="@color/btn_functions"
+                android:text="@string/key_bracketEnd" />
+
+        </GridLayout>
+
     </LinearLayout>
 
 </FrameLayout>

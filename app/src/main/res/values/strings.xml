@@ -26,4 +26,6 @@
     <string name="key_C">C</string>
     <string name="key_delete">del</string>
     <string name="key_division">/</string>
+    <string name="key_bracketStart">(</string>
+    <string name="key_bracketEnd">)</string>
 </resources>
