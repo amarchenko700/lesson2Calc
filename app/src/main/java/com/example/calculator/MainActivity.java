@@ -1,21 +1,36 @@
 package com.example.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String OBJECT_CALCULATOR = "OBJECT_CALCULATOR";
+    private Calculator calculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.expressionString);
-        TextView textViewMemory = findViewById(R.id.textMemory);
-        textViewMemory.setVisibility(View.INVISIBLE);
-        Calculator calculator = new Calculator(textView, textViewMemory);
+        if(savedInstanceState == null){
+            TextView textView = findViewById(R.id.expressionString);
+            TextView textViewMemory = findViewById(R.id.textMemory);
+            calculator = new Calculator(textView, textViewMemory);
+        }else {
+            calculator = (Calculator) savedInstanceState.getSerializable(OBJECT_CALCULATOR);
+            calculator.getTextView().setText(calculator.getExpressionString());
+        }
+
+        if(calculator.getMemoryValue() == 0){
+            calculator.getTextViewMemory().setVisibility(View.INVISIBLE);
+        }else {
+            calculator.getTextViewMemory().setVisibility(View.VISIBLE);
+        }
 
         CalcButtonListener calcButtonListener = new CalcButtonListener(calculator);
 
@@ -62,4 +77,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(OBJECT_CALCULATOR, calculator);
+    }
 }

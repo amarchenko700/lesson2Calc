@@ -3,13 +3,17 @@ package com.example.calculator;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 import MathOperations.*;
 
-public class Calculator {
+public class Calculator implements Serializable {
 
     private String expressionString;
+
     private TextView textView, textViewMemory;
     private MathGB mgb;
+
     private Float memoryValue = 0f;
 
     public Calculator(TextView tv, TextView tvm) {
@@ -20,7 +24,7 @@ public class Calculator {
     }
 
     public void inputExpression(View v) {
-
+CharSequence ch = textView.getText();
         switch (v.getId()) {
             //region numbers_Handlers
             case R.id.key_0: {
@@ -115,6 +119,7 @@ public class Calculator {
                         expressionString = String.copyValueOf(expCharArr, 0, indexOperation + 1);
                         break;
                     }
+                    if(indexOperation == 0) expressionString = "";
                 }
                 break;
             }
@@ -173,5 +178,20 @@ public class Calculator {
         textViewMemory.setVisibility(View.VISIBLE);
     }
 
+    public Float getMemoryValue() {
+        return memoryValue;
+    }
+
+    public String getExpressionString() {
+        return expressionString;
+    }
+
+    public TextView getTextView() {
+        return textView;
+    }
+
+    public TextView getTextViewMemory() {
+        return textViewMemory;
+    }
 }
 
