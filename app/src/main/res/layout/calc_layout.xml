@@ -5,53 +5,26 @@
     android:layout_gravity="center"
     android:orientation="vertical">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:columnCount="5">
+    <TextView
+        android:id="@+id/textMemory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/sizeMemoryString"
+        android:gravity="start"
+        android:textColor="@color/colorTextView"
+        android:text="M">
+    </TextView>
 
-        <Button
-            android:id="@+id/MC"
-            android:layout_width="@dimen/btn_mem_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MC" />
-
-        <Button
-            android:id="@+id/MR"
-            android:layout_width="@dimen/btn_mem_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MR" />
-
-        <Button
-            android:id="@+id/MAsc"
-            android:layout_width="@dimen/btn_mem_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MAsc" />
-
-        <Button
-            android:id="@+id/MDesc"
-            android:layout_width="@dimen/btn_mem_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MDesc" />
-
-        <Button
-            android:id="@+id/MS"
-            android:layout_width="@dimen/btn_mem_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MS" />
-
-    </GridLayout>
+    <TextView
+        android:id="@+id/expressionString"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/sizeExprString"
+        android:textColor="@color/colorTextView"
+        android:gravity="center">
+    </TextView>
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -59,12 +32,36 @@
         android:columnCount="4">
 
         <Button
-            android:id="@+id/key_percent"
+            android:id="@+id/key_MC"
             android:layout_width="@dimen/btn_width"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_percent" />
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MC" />
+
+        <Button
+            android:id="@+id/key_MR"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MR" />
+
+        <Button
+            android:id="@+id/key_MAsc"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MAsc" />
+
+        <Button
+            android:id="@+id/key_MDesc"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_memory"
+            android:text="@string/MDesc" />
 
         <Button
             android:id="@+id/key_CE"
@@ -88,6 +85,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_functions"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
             android:text="@string/key_delete" />
 
         <Button
@@ -187,14 +186,6 @@
             android:text="@string/key_addition" />
 
         <Button
-            android:id="@+id/key_inverting"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_inverting" />
-
-        <Button
             android:id="@+id/key_0"
             android:layout_width="@dimen/btn_width"
             android:layout_height="wrap_content"
@@ -217,6 +208,14 @@
             android:layout_margin="@dimen/btn_layout_margin"
             android:backgroundTint="@color/btn_functions"
             android:text="@string/key_equally" />
+
+        <Button
+            android:id="@+id/key_division"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_layout_margin"
+            android:backgroundTint="@color/btn_functions"
+            android:text="@string/key_division" />
 
     </GridLayout>
 

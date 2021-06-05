@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="btn_width">77dp</dimen>
-    <dimen name="btn_mem_width">60dp</dimen>
     <dimen name="btn_layout_margin">3dp</dimen>
+    <dimen name="sizeExprString">20sp</dimen>
+    <dimen name="sizeMemoryString">30sp</dimen>
 </resources>
