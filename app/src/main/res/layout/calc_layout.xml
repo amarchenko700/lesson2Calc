@@ -5,25 +5,14 @@
     android:layout_gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textMemory"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textStyle="bold"
-        android:textSize="@dimen/sizeMemoryString"
-        android:gravity="start"
-        android:textColor="@color/colorTextView"
-        android:text="M">
-    </TextView>
+     <TextView
+            android:id="@+id/textMemory"
+            style="@style/textMemory">
+        </TextView>
 
     <TextView
         android:id="@+id/expressionString"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textStyle="bold"
-        android:textSize="@dimen/sizeExprString"
-        android:textColor="@color/colorTextView"
-        android:gravity="center">
+        style="@style/textExpressionString">
     </TextView>
 
     <GridLayout
@@ -33,189 +22,120 @@
 
         <Button
             android:id="@+id/key_MC"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MC" />
+            android:text="@string/MC"
+            style="@style/memoryBtn"/>
 
         <Button
             android:id="@+id/key_MR"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MR" />
+            android:text="@string/MR"
+            style="@style/memoryBtn"/>
 
         <Button
             android:id="@+id/key_MAsc"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MAsc" />
+            android:text="@string/MAsc"
+            style="@style/memoryBtn"/>
 
         <Button
             android:id="@+id/key_MDesc"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_memory"
-            android:text="@string/MDesc" />
+            android:text="@string/MDesc"
+            style="@style/memoryBtn"/>
 
         <Button
             android:id="@+id/key_CE"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_CE" />
+            android:text="@string/key_CE"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_C"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_C" />
+            android:text="@string/key_C"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_delete"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
-            android:text="@string/key_delete" />
+            android:text="@string/key_delete"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_7"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_7" />
+            android:text="@string/key_7"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_8"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_8" />
+            android:text="@string/key_8"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_9"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_9" />
+            android:text="@string/key_9"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_multiplication"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_multiplication" />
+            android:text="@string/key_multiplication"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_4"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_4" />
+            android:text="@string/key_4"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_5"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_5" />
+            android:text="@string/key_5"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_6"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_6" />
+            android:text="@string/key_6"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_subtraction"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_subtraction" />
+            android:text="@string/key_subtraction"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_1"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_1" />
+            android:text="@string/key_1"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_2"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_2" />
+            android:text="@string/key_2"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_3"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_3" />
+            android:text="@string/key_3"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_addition"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_addition" />
+            android:text="@string/key_addition"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_0"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_0" />
+            android:text="@string/key_0"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_dot"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_numbers"
-            android:text="@string/key_dot" />
+            android:text="@string/key_dot"
+            style="@style/numbersBtn"/>
 
         <Button
             android:id="@+id/key_equally"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_equally" />
+            android:text="@string/key_equally"
+            style="@style/functionBtn"/>
 
         <Button
             android:id="@+id/key_division"
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_layout_margin"
-            android:backgroundTint="@color/btn_functions"
-            android:text="@string/key_division" />
+            android:text="@string/key_division"
+            style="@style/functionBtn"/>
 
     </GridLayout>
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="memoryBtn">
+        <item name="backgroundTint">@color/btn_memory</item>
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/btn_layout_margin</item>
+    </style>
+
+    <style name="functionBtn" parent="memoryBtn">
+        <item name="backgroundTint">@color/btn_functions</item>
+    </style>
+
+    <style name="numbersBtn" parent="memoryBtn">
+        <item name="backgroundTint">@color/btn_numbers</item>
+    </style>
+
+    <style name="textMemory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sizeMemoryString</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:text">"M"</item>
+    </style>
+
+    <style name="textExpressionString" parent="textMemory">
+        <item name="android:textSize">@dimen/sizeExprString</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:text">""</item>
+    </style>
+
+</resources>
