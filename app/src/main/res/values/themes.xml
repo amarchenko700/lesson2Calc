@@ -13,4 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CalculatorMemoryBtn" parent="Theme.Calculator">
+        <item name="backgroundTint">@color/btn_memory</item>
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/btn_layout_margin</item>
+    </style>
+
 </resources>
