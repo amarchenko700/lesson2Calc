@@ -28,4 +28,6 @@
     <string name="key_division">/</string>
     <string name="key_bracketStart">(</string>
     <string name="key_bracketEnd">)</string>
+    <string name="Theme1">Тема 1</string>
+    <string name="Theme2">Тема 2</string>
 </resources>

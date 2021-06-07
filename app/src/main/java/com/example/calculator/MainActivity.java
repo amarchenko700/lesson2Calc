@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private Calculator calculator;
     private TextView textView, textViewMemory;
 
+    private ThemeStorage storage;
+
     private final int[] numberButtonIds = new int[]{R.id.key_0, R.id.key_1, R.id.key_2, R.id.key_3,
             R.id.key_4, R.id.key_5, R.id.key_6, R.id.key_7, R.id.key_8, R.id.key_9};
 
@@ -24,7 +26,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        storage = new ThemeStorage(this);
+        setTheme(storage.getTheme().getResource());
+
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.key_Theme1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storage.setTheme(AppTheme.PORTRAIT);
+
+                recreate();
+            }
+        });
+
+        findViewById(R.id.key_Theme2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storage.setTheme(AppTheme.LANDSCAPE);
+
+                recreate();
+            }
+        });
 
         textView = findViewById(R.id.expressionString);
         textViewMemory = findViewById(R.id.textMemory);

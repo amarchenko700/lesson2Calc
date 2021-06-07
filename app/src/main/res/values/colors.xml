@@ -11,4 +11,7 @@
     <color name="btn_numbers">#2A6BDC</color>
     <color name="btn_functions">#001EE1</color>
     <color name="colorTextView">#04C4F4</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryLand">#1C6E05</color>
+    <color name="colorThemesBtn">#FF5722</color>
 </resources>

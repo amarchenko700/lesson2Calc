@@ -8,6 +8,10 @@
         <item name="cornerRadius">@dimen/cornerRadius</item>
     </style>
 
+    <style name="ThemesBtn" parent="memoryBtn">
+        <item name="backgroundTint">@color/colorThemesBtn</item>
+    </style>
+
     <style name="functionBtn" parent="memoryBtn">
         <item name="backgroundTint">@color/btn_functions</item>
     </style>
