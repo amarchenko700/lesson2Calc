@@ -12,5 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/btnsCalc</item>
+    </style>
+
+    <style name="CalculatorTheme" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="CalculatorThemeLand" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimaryLand</item>
     </style>
 </resources>

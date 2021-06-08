@@ -14,4 +14,5 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryLand">#1C6E05</color>
     <color name="colorThemesBtn">#FF5722</color>
+    <color name="btnsCalc">#FF9800</color>
 </resources>

@@ -7,17 +7,18 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/btnsCalc">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_Theme1"
-            style="@style/ThemesBtn"
+            style="@style/sizeBtnClc"
             android:text="@string/Theme1">
         </com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_Theme2"
-            style="@style/ThemesBtn"
+            style="@style/sizeBtnClc"
             android:text="@string/Theme2">
         </com.google.android.material.button.MaterialButton>
 
@@ -34,7 +35,8 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="4">
+        android:columnCount="4"
+        style="@style/btnsCalc">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_MC"

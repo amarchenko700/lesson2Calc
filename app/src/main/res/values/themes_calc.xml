@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="memoryBtn">
-        <item name="backgroundTint">@color/btn_memory</item>
+    <style name="btnsCalc">
         <item name="android:layout_width">@dimen/btn_width</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/btnsCalc</item>
         <item name="android:layout_margin">@dimen/btn_layout_margin</item>
         <item name="cornerRadius">@dimen/cornerRadius</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="ThemesBtn" parent="memoryBtn">
+    <style name="sizeBtnClc">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="memoryBtn" parent="btnsCalc">
+        <item name="backgroundTint">@color/btn_memory</item>
+    </style>
+
+    <style name="ThemesBtn" >
         <item name="backgroundTint">@color/colorThemesBtn</item>
     </style>
 

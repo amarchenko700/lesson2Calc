@@ -54,7 +54,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_MC"
                 android:text="@string/MC"
-                style="@style/memoryBtn"/>
+                style="@style/memoryBtn" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_MR"
