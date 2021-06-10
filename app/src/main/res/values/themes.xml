@@ -12,5 +12,22 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/btnsCalc</item>
+    </style>
+
+    <style name="ThemeWinter" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorWinter</item>
+    </style>
+
+    <style name="ThemeSpring" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorSpring</item>
+    </style>
+
+    <style name="ThemeSummer" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorSummer</item>
+    </style>
+
+    <style name="ThemeAutumn" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorAutumn</item>
     </style>
 </resources>

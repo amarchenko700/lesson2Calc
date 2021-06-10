@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btnsCalc">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/btnsCalc</item>
+        <item name="android:layout_margin">@dimen/btn_layout_margin</item>
+        <item name="cornerRadius">@dimen/cornerRadius</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="materialButtonStyle">@style/btnsCalc</item>
+    </style>
+
+    <style name="sizeBtnClc">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="memoryBtn" parent="btnsCalc">
+        <item name="backgroundTint">@color/btn_memory</item>
+    </style>
+
+    <style name="ThemesBtn" >
+        <item name="backgroundTint">@color/colorThemesBtn</item>
+    </style>
+
+    <style name="functionBtn" parent="memoryBtn">
+        <item name="backgroundTint">@color/btn_functions</item>
+    </style>
+
+    <style name="numbersBtn" parent="memoryBtn">
+        <item name="backgroundTint">@color/btn_numbers</item>
+    </style>
+
+    <style name="textMemory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sizeMemoryString</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:text">"M"</item>
+    </style>
+
+    <style name="textExpressionString" parent="textMemory">
+        <item name="android:textSize">@dimen/sizeExprString</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:text">""</item>
+    </style>
+
+    <style name="btnSettings">
+        <item name="android:layout_width">@dimen/settingsImgWidth</item>
+        <item name="android:layout_height">@dimen/setiingsImgHeight</item>
+        <item name="srcCompat">@drawable/settings</item>
+        <item name="android:layout_gravity">top|end</item>
+    </style>
+
+    <style name="radioBtnChooseTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
