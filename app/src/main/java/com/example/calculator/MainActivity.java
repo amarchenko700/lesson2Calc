@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onActivityResult(String result) {
                         if (result != null) {
                             AppTheme currTheme = storage.getTheme(result);
-                            //storage.setTheme(currTheme);
-                            setTheme(currTheme.getResource());
+                            storage.setTheme(currTheme);
+                            recreate();
                         }
                     }
                 }
