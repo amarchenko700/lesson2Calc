@@ -1,8 +1,10 @@
 package com.example.calculator;
 
+import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String OBJECT_CALCULATOR = "OBJECT_CALCULATOR";
     private Calculator calculator;
     private TextView textView, textViewMemory;
-
+    private AppTheme actualTheme;
     private ThemeStorage storage;
 
     private final int[] numberButtonIds = new int[]{R.id.key_0, R.id.key_1, R.id.key_2, R.id.key_3,
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         storage = new ThemeStorage(this);
+        actualTheme = storage.getTheme();
+        if(actualTheme == null){
+            actualTheme = AppTheme.WINTER;
+        }
+        setTheme(storage.getTheme().getResource());
 
         setContentView(R.layout.activity_main);
 
@@ -53,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             textViewMemory.setVisibility(View.VISIBLE);
         }
-
+        //region Установка_Listener
         CalcButtonListener calcButtonListener = new CalcButtonListener(calculator);
 
         setClickListenerOnButton(R.id.key_MC, calcButtonListener);
@@ -85,13 +93,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setClickListenerOnButton(R.id.key_equally, calcButtonListener);
+        //endregion
+        ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if(result.getResultCode() == Activity.RESULT_OK){
+                    if(result.getData() != null){
+                        actualTheme = (AppTheme) result.getData().getSerializableExtra(SettingsActivity.KEY_RESULT);
+                        storage.setTheme(actualTheme);
+                        recreate();
+                    }
+                }
+            }
+        });
 
-        ActivityResultLauncher<String> launcher = registerForActivityResult(new LoginResultContract(), new ActivityResultCallback<String>() {
+        ActivityResultLauncher<AppTheme> launcher2 = registerForActivityResult(new LoginResultContract(), new ActivityResultCallback<AppTheme>() {
                     @Override
-                    public void onActivityResult(String result) {
+                    public void onActivityResult(AppTheme result) {
                         if (result != null) {
-                            AppTheme currTheme = storage.getTheme(result);
-                            storage.setTheme(currTheme);
+                            actualTheme = result;
+                            storage.setTheme(actualTheme);
                             recreate();
                         }
                     }
@@ -101,28 +122,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnSetting).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-//                startActivity(intent);
-                launcher.launch("Установите тему");
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                intent.putExtra(SettingsActivity.KEY_THEME_TO_DISPLAY, actualTheme);
+                launcher.launch(intent);
+                //launcher2.launch(actualTheme);
             }
         });
     }
 
-    public static class LoginResultContract extends ActivityResultContract<String, String> {
+    public static class LoginResultContract extends ActivityResultContract<AppTheme, AppTheme> {
 
         @NonNull
         @Override
-        public Intent createIntent(@NonNull Context context, String input) {
+        public Intent createIntent(@NonNull Context context, AppTheme input) {
             Intent intent = new Intent(context, SettingsActivity.class);
-            intent.putExtra(SettingsActivity.KEY_TEXT_TO_DISPLAY, input);
+            intent.putExtra(SettingsActivity.KEY_THEME_TO_DISPLAY, input);
             return intent;
         }
 
         @Override
-        public String parseResult(int resultCode, @Nullable Intent intent) {
+        public AppTheme parseResult(int resultCode, @Nullable Intent intent) {
 
             if (resultCode == Activity.RESULT_OK && intent != null) {
-                return intent.getStringExtra(SettingsActivity.KEY_RESULT);
+                return (AppTheme) intent.getSerializableExtra(SettingsActivity.KEY_RESULT);
             }
             return null;
         }

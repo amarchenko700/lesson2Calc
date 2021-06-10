@@ -20,7 +20,7 @@ public enum AppTheme {
         return resource;
     }
 
-    public String  getKey() {
+    public String getKey() {
         return key;
     }
 }

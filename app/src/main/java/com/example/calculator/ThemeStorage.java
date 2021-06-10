@@ -15,8 +15,8 @@ public class ThemeStorage {
         sharedPreferences = context.getSharedPreferences("app_themes", MODE_PRIVATE);
     }
 
-    public AppTheme getTheme(String key) {
-
+    public AppTheme getTheme() {
+        String key = sharedPreferences.getString(KEY_APP_THEME, AppTheme.WINTER.getKey());
         for (AppTheme theme : AppTheme.values()) {
             if (theme.getKey().equals(key)) {
                 return theme;
