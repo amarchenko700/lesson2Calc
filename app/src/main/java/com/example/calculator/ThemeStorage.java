@@ -15,8 +15,7 @@ public class ThemeStorage {
         sharedPreferences = context.getSharedPreferences("app_themes", MODE_PRIVATE);
     }
 
-    public AppTheme getTheme() {
-        String key = sharedPreferences.getString(KEY_APP_THEME, AppTheme.PORTRAIT.getKey());
+    public AppTheme getTheme(String key) {
 
         for (AppTheme theme : AppTheme.values()) {
             if (theme.getKey().equals(key)) {
@@ -26,6 +25,7 @@ public class ThemeStorage {
 
         throw new IllegalStateException("Wrong!");
     }
+
 
     public void setTheme(AppTheme theme) {
         sharedPreferences.edit()

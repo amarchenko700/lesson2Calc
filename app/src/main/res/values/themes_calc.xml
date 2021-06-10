@@ -9,6 +9,12 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="buttonStyle">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="materialButtonStyle">@style/btnsCalc</item>
+    </style>
+
     <style name="sizeBtnClc">
         <item name="android:layout_width">@dimen/btn_width</item>
         <item name="android:layout_height">wrap_content</item>
@@ -47,5 +53,16 @@
         <item name="android:text">""</item>
     </style>
 
-    <dimen name="cornerRadius">23dp</dimen>
+    <style name="btnSettings">
+        <item name="android:layout_width">@dimen/settingsImgWidth</item>
+        <item name="android:layout_height">@dimen/setiingsImgHeight</item>
+        <item name="srcCompat">@drawable/settings</item>
+        <item name="android:layout_gravity">top|end</item>
+    </style>
+
+    <style name="radioBtnChooseTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

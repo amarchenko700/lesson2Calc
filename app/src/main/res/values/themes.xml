@@ -15,12 +15,19 @@
         <item name="materialButtonStyle">@style/btnsCalc</item>
     </style>
 
-    <style name="CalculatorTheme" parent="Theme.Calculator">
-        <item name="colorPrimary">@color/colorPrimary</item>
-
+    <style name="ThemeWinter" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorWinter</item>
     </style>
 
-    <style name="CalculatorThemeLand" parent="Theme.Calculator">
-        <item name="colorPrimary">@color/colorPrimaryLand</item>
+    <style name="ThemeSpring" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorSpring</item>
+    </style>
+
+    <style name="ThemeSummer" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorSummer</item>
+    </style>
+
+    <style name="ThemeAutumn" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/colorAutumn</item>
     </style>
 </resources>

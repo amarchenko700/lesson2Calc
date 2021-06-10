@@ -2,8 +2,10 @@ package com.example.calculator;
 
 public enum AppTheme {
 
-    PORTRAIT(R.style.CalculatorTheme, "portrait"),
-    LANDSCAPE(R.style.CalculatorThemeLand, "landscape");
+    WINTER(R.style.ThemeWinter, "Winter"),
+    SPRING(R.style.ThemeSpring, "Spring"),
+    SUMMER(R.style.ThemeSummer, "Summer"),
+    AUTUMN(R.style.ThemeAutumn, "Autumn");
 
     AppTheme(int resource, String key) {
         this.resource = resource;

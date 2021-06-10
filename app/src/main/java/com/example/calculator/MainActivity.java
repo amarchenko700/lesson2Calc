@@ -1,13 +1,20 @@
 package com.example.calculator;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,27 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         storage = new ThemeStorage(this);
-        setTheme(storage.getTheme().getResource());
 
         setContentView(R.layout.activity_main);
-
-        findViewById(R.id.key_Theme1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                storage.setTheme(AppTheme.PORTRAIT);
-
-                recreate();
-            }
-        });
-
-        findViewById(R.id.key_Theme2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                storage.setTheme(AppTheme.LANDSCAPE);
-
-                recreate();
-            }
-        });
 
         textView = findViewById(R.id.expressionString);
         textViewMemory = findViewById(R.id.textMemory);
@@ -98,6 +86,46 @@ public class MainActivity extends AppCompatActivity {
 
         setClickListenerOnButton(R.id.key_equally, calcButtonListener);
 
+        ActivityResultLauncher<String> launcher = registerForActivityResult(new LoginResultContract(), new ActivityResultCallback<String>() {
+                    @Override
+                    public void onActivityResult(String result) {
+                        if (result != null) {
+                            AppTheme currTheme = storage.getTheme(result);
+                            //storage.setTheme(currTheme);
+                            setTheme(currTheme.getResource());
+                        }
+                    }
+                }
+        );
+
+        findViewById(R.id.btnSetting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//                startActivity(intent);
+                launcher.launch("Установите тему");
+            }
+        });
+    }
+
+    public static class LoginResultContract extends ActivityResultContract<String, String> {
+
+        @NonNull
+        @Override
+        public Intent createIntent(@NonNull Context context, String input) {
+            Intent intent = new Intent(context, SettingsActivity.class);
+            intent.putExtra(SettingsActivity.KEY_TEXT_TO_DISPLAY, input);
+            return intent;
+        }
+
+        @Override
+        public String parseResult(int resultCode, @Nullable Intent intent) {
+
+            if (resultCode == Activity.RESULT_OK && intent != null) {
+                return intent.getStringExtra(SettingsActivity.KEY_RESULT);
+            }
+            return null;
+        }
     }
 
     private void setClickListenerOnButton(int idView, CalcButtonListener calcButtonListener) {

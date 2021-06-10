@@ -18,4 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"/>
 
+    <ImageView
+        android:id="@+id/btnSetting"
+        style="@style/btnSettings"></ImageView>
+
 </FrameLayout>

@@ -3,26 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:theme="@style/btnsCalc">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/key_Theme1"
-            style="@style/sizeBtnClc"
-            android:text="@string/Theme1">
-        </com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/key_Theme2"
-            style="@style/sizeBtnClc"
-            android:text="@string/Theme2">
-        </com.google.android.material.button.MaterialButton>
-
-    </LinearLayout>
+    android:orientation="vertical"
+    android:theme="@style/buttonStyle">
 
     <TextView
         android:id="@+id/textMemory"
